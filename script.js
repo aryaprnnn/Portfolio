@@ -565,3 +565,21 @@ document.addEventListener('DOMContentLoaded', () => {
     initProjectFilter();
     revealElements();
 });
+
+// LOADING SCREEN
+window.addEventListener('load', function() {
+    const loadingScreen = document.getElementById('loading-screen');
+    if (loadingScreen) {
+        setTimeout(() => {
+            loadingScreen.classList.add('hidden');
+        }, 800);
+    }
+});
+
+// Auto hide loading screen after 4 seconds (fallback)
+setTimeout(() => {
+    const loadingScreen = document.getElementById('loading-screen');
+    if (loadingScreen && !loadingScreen.classList.contains('hidden')) {
+        loadingScreen.classList.add('hidden');
+    }
+}, 4000);
