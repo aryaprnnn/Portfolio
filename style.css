@@ -1031,6 +1031,7 @@ h3 {
     color: white;
     font-size: 0.9rem;
     margin: 0;
+    letter-spacing: 0;
     transform: translateY(10px);
     transition: transform 0.4s ease 0.1s; /* Delay sedikit agar estetik */
 }
