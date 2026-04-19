@@ -328,13 +328,14 @@ function initPortfolio() {
 // 3. LOGIKA INTERAKTIF (Theme, Scroll, Modal)
 // ==========================================
 
-// --- 3D HOVER EFFECT (Untuk Foto) ---
+// --- 3D HOVER EFFECT (Untuk Foto) dengan Touch Support ---
 function initPhotoHover() {
     const photoCard = document.getElementById('photo-card');
     if (!photoCard) return;
 
     const spotlight = photoCard.querySelector('.spotlight');
 
+    // Mouse events
     photoCard.addEventListener('mousemove', (e) => {
         const rect = photoCard.getBoundingClientRect();
         const x = e.clientX - rect.left; 
@@ -353,6 +354,17 @@ function initPhotoHover() {
     });
 
     photoCard.addEventListener('mouseleave', () => {
+        photoCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        photoCard.style.transition = 'transform 0.5s ease-out';
+        setTimeout(() => { photoCard.style.transition = 'transform 0.1s ease-out'; }, 500);
+    });
+
+    // Touch events untuk mobile
+    photoCard.addEventListener('touchstart', () => {
+        photoCard.style.transform = 'perspective(1000px) rotateX(-8deg) rotateY(8deg) scale3d(1.02, 1.02, 1.02)';
+    });
+
+    photoCard.addEventListener('touchend', () => {
         photoCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
         photoCard.style.transition = 'transform 0.5s ease-out';
         setTimeout(() => { photoCard.style.transition = 'transform 0.1s ease-out'; }, 500);
@@ -394,14 +406,20 @@ function initProjectFilter() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     
     filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
+        // Support both click dan touch
+        const handleFilterClick = () => {
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
 
             const filterValue = button.getAttribute('data-filter');
-            
             renderProjects(filterValue);
-        });
+        };
+        
+        button.addEventListener('click', handleFilterClick);
+        button.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            handleFilterClick();
+        }, { passive: false });
     });
 }
 
@@ -530,12 +548,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // Toggle menu saat hamburger diklik
         hamburger.addEventListener('click', (e) => {
             e.stopPropagation();
+            e.preventDefault();
             navMenu.classList.toggle('active');
         });
         
         // Tutup menu saat link diklik
         navMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
+            link.addEventListener('click', (e) => {
+                e.stopPropagation();
                 if (window.innerWidth <= 600) {
                     navMenu.classList.remove('active');
                 }
@@ -545,7 +565,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Tutup menu jika klik di luar navbar
         document.addEventListener('click', (e) => {
             if (window.innerWidth <= 600 && navMenu.classList.contains('active')) {
-                if (!e.target.closest('.floating-nav')) {
+                const isClickOnHamburger = e.target.closest('#hamburger-menu') !== null;
+                const isClickInNav = e.target.closest('.floating-nav') !== null;
+                
+                if (!isClickOnHamburger && !isClickInNav) {
                     navMenu.classList.remove('active');
                 }
             }
