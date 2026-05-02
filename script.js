@@ -271,7 +271,7 @@ function initPortfolio() {
     if (techSkillsContainer) {
         techSkillsContainer.innerHTML = portfolioData.skills.tech.map(s => `
             <div class="skill-card reveal">
-                <div class="icon-box"><img src="${s.icon}" alt="${s.name}"></div>
+                <div class="icon-box"><img src="${s.icon}" alt="${s.name}" loading="lazy" width="55" height="55"></div>
                 <div class="skill-info">
                     <h4>${s.name}</h4>
                     <p>${s.category || ''}</p>
@@ -282,7 +282,7 @@ function initPortfolio() {
     if (creativeSkillsContainer) {
         creativeSkillsContainer.innerHTML = portfolioData.skills.creative.map(s => `
             <div class="skill-card reveal">
-                <div class="icon-box"><img src="${s.icon}" alt="${s.name}"></div>
+                <div class="icon-box"><img src="${s.icon}" alt="${s.name}" loading="lazy" width="55" height="55"></div>
                 <div class="skill-info">
                     <h4>${s.name}</h4>
                     <p>${s.category || ''}</p>
@@ -313,7 +313,7 @@ function initPortfolio() {
     projectContainer.innerHTML = portfolioData.projects.map((p, idx) => `
         <div class="project-item reveal" data-category="${p.category}" 
              onclick="openProjectDetail(${idx})">
-            <img src="${p.img}" class="project-img">
+            <img src="${p.img}" class="project-img" loading="lazy" width="400" height="170">
             ${p.award && p.award.length > 0 ? `<span class='award-badge'>${p.award}</span>` : ''}
             <div class="project-overlay">
                 <span class="category-tag">${p.category}</span>
@@ -388,7 +388,7 @@ function renderProjects(filterValue = 'all') {
         card.onclick = () => openProjectDetail(index);
 
         card.innerHTML = `
-            <img src="${project.img}" class="project-img">
+            <img src="${project.img}" class="project-img" loading="lazy" width="400" height="170">
             
             ${project.award ? `<div class="award-badge">${project.award}</div>` : ''}
 
@@ -488,7 +488,7 @@ function openProjectDetail(idx) {
             <span class="blue-text" style="font-weight:800; text-transform:uppercase;">${p.category}</span>
             <h2 style="margin: 10px 0 5px 0;">${p.title}</h2>
             ${p.award && p.award.length > 0 ? `<span class='award-badge-modal'>${p.award}</span>` : ''}
-            <img src="${p.img}" style="width: 100%; border-radius: 15px; margin: 18px 0 20px 0;">
+            <img src="${p.img}" style="width: 100%; border-radius: 15px; margin: 18px 0 20px 0;" loading="lazy" width="600" height="300">
             <h5 style="font-size: 1.1rem;">About Project</h5>
             <p style="margin-bottom: 20px;">${p.long_desc || p.desc}</p>
             <h5 style="font-size: 1.1rem;">Technologies</h5>
