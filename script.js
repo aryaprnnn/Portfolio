@@ -246,21 +246,20 @@ const portfolioData = {
     ]
 };
 
-// ==========================================
-// 2. FUNGSI RENDER (Memasukkan data ke HTML)
-// ==========================================
+
+// 2. RENDER FUNCTION (extract data from HTML)
+
 function initPortfolio() {
     // Hero & About
     const birthYear = 2006; // Ganti sesuai tahun lahir
     const currentYear = new Date().getFullYear();
     const age = currentYear - birthYear;
     
-    // Pakai innerHTML agar <br> dan tag HTML tetap tampil
     document.getElementById('role-text').innerHTML = portfolioData.role;
     document.getElementById('about-desc').innerHTML = portfolioData.aboutDesc.replace('$age', age);
     document.getElementById('my-photo').src = portfolioData.myPhoto;
 
-    // Stats (Set target untuk animasi counter)
+    // Stats
     document.getElementById('stat-year').setAttribute('data-target', portfolioData.stats.yearExp);
     document.getElementById('stat-projects').setAttribute('data-target', portfolioData.stats.projectDone);
     document.getElementById('stat-clients').setAttribute('data-target', portfolioData.stats.happyClient);
@@ -324,11 +323,10 @@ function initPortfolio() {
     `).join('');
 }
 
-// ==========================================
-// 3. LOGIKA INTERAKTIF (Theme, Scroll, Modal)
-// ==========================================
 
-// --- 3D HOVER EFFECT (Untuk Foto) dengan Touch Support ---
+// 3. LOGIC (Theme, Scroll, Modal)
+
+// 3D HOVER EFFECT (for photo)
 function initPhotoHover() {
     const photoCard = document.getElementById('photo-card');
     if (!photoCard) return;
@@ -359,7 +357,7 @@ function initPhotoHover() {
         setTimeout(() => { photoCard.style.transition = 'transform 0.1s ease-out'; }, 500);
     });
 
-    // Touch events untuk mobile
+    // Touch events for mobile
     photoCard.addEventListener('touchstart', () => {
         photoCard.style.transform = 'perspective(1000px) rotateX(-8deg) rotateY(8deg) scale3d(1.02, 1.02, 1.02)';
     });
@@ -371,7 +369,7 @@ function initPhotoHover() {
     });
 }
 
-// --- FILTER PROJECT ---
+// FILTER PROJECT 
 function renderProjects(filterValue = 'all') {
     const container = document.getElementById('project-container');
     if (!container) return;
@@ -423,7 +421,7 @@ function initProjectFilter() {
     });
 }
 
-// --- TEMA (Dark/Light) ---
+// Theme (Dark/Light)
 function toggleTheme() {
     const html = document.documentElement;
     const currentTheme = html.getAttribute('data-theme');
@@ -443,7 +441,7 @@ function updateIcon(theme) {
     }
 }
 
-// --- ANIMASI COUNTER ---
+// Cunter Animation
 const animateCounters = () => {
     const counters = document.querySelectorAll('.stat-number');
     counters.forEach(counter => {
@@ -462,7 +460,7 @@ const animateCounters = () => {
     });
 };
 
-// --- REVEAL ON SCROLL ---
+// Reveal On Scroll
 const revealElements = () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -476,8 +474,8 @@ const revealElements = () => {
     document.querySelectorAll('.reveal, .reveal-left, .stats-row').forEach(el => observer.observe(el));
 };
 
-// --- MODAL SYSTEM ---
-// Modal detail project
+// Modal System
+
 function openProjectDetail(idx) {
     const p = portfolioData.projects[idx];
     const modal = document.getElementById('projectModal');
@@ -488,7 +486,7 @@ function openProjectDetail(idx) {
             <span class="blue-text" style="font-weight:800; text-transform:uppercase;">${p.category}</span>
             <h2 style="margin: 10px 0 5px 0;">${p.title}</h2>
             ${p.award && p.award.length > 0 ? `<span class='award-badge-modal'>${p.award}</span>` : ''}
-            <img src="${p.img}" style="width: 100%; border-radius: 15px; margin: 18px 0 20px 0;" loading="lazy" width="600" height="300">
+            <img src="${p.img}" style="width: 100%; height: auto; border-radius: 15px; margin: 18px 0 20px 0; object-fit: cover;" loading="lazy">
             <h5 style="font-size: 1.1rem;">About Project</h5>
             <p style="margin-bottom: 20px;">${p.long_desc || p.desc}</p>
             <h5 style="font-size: 1.1rem;">Technologies</h5>
@@ -504,14 +502,14 @@ function closeProjectDetail() {
     document.body.style.overflow = 'auto';
 }
 
-// Tutup modal dengan tombol Escape
+// Close Modal
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
         closeProjectDetail();
     }
 });
 
-// Tutup modal jika klik di luar modal
+// Close modal if click outside modal
 document.getElementById('projectModal')?.addEventListener('click', (e) => {
     if (e.target.id === 'projectModal') {
         closeProjectDetail();
@@ -519,7 +517,7 @@ document.getElementById('projectModal')?.addEventListener('click', (e) => {
 });
 
 
-// --- UPDATE JALANKAN SEMUA ---
+// Run All
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Tema
     let savedTheme = localStorage.getItem('theme');
@@ -530,7 +528,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.setAttribute('data-theme', savedTheme);
     updateIcon(savedTheme);
 
-    // 2. Navbar - Hamburger menu toggle untuk mobile
+    // 2. Navbar - Hamburger menu toggle for mobile
     const hamburger = document.getElementById('hamburger-menu');
     const navMenu = document.getElementById('nav-menu');
     
@@ -545,14 +543,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         
-        // Toggle menu saat hamburger diklik
+        // Toggle menu if hamburger click
         hamburger.addEventListener('click', (e) => {
             e.stopPropagation();
             e.preventDefault();
             navMenu.classList.toggle('active');
         });
         
-        // Tutup menu saat link diklik
+        // close menu if click link
         navMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', (e) => {
                 e.stopPropagation();
@@ -562,7 +560,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
         
-        // Tutup menu jika klik di luar navbar
+        // close menu if click outside
         document.addEventListener('click', (e) => {
             if (window.innerWidth <= 600 && navMenu.classList.contains('active')) {
                 const isClickOnHamburger = e.target.closest('#hamburger-menu') !== null;
@@ -574,7 +572,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         
-        // Check saat resize dan saat load
+        // Check on resize and load
         window.addEventListener('resize', checkMobileNav);
         checkMobileNav();
     }
@@ -583,13 +581,13 @@ document.addEventListener('DOMContentLoaded', () => {
     renderProjects();
     initPortfolio();
 
-    // 4. Fitur Interaktif
+    // 4. Interactive feature
     initPhotoHover();
     initProjectFilter();
     revealElements();
 });
 
-// LOADING SCREEN
+// Loading Screen
 window.addEventListener('load', function() {
     const loadingScreen = document.getElementById('loading-screen');
     if (loadingScreen) {
