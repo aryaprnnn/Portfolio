@@ -1,7 +1,7 @@
 // 1 DATA DATABASE 
 const portfolioData = {
     role: "Full-stack Developer &<br><span class='blue-text'>Illustrative Designer</span>",
-    myPhoto: "./img/Photo.jpg", 
+    myPhoto: "./img/Photo.webp", 
     aboutDesc: "I am I Komang Arya Yoga Pramana, a $age-year-old <span class='blue-text'><strong>Software Engineering Technology</strong></span> student at Bali State Polytechnic. I focus my expertise on <span class='blue-text'><strong>Laravel</strong></span> and <span class='blue-text'><strong>Flutter</strong></span>, as well as working as a <span class='blue-text'><strong>Digital Illustrator</strong></span>. I believe that technology is not just about lines of code, but about creating purposeful solutions wrapped in compelling design aesthetics. Combining technical precision with effective communication is my core strength in every project I undertake.",
     stats: {
         yearExp: 3,
@@ -22,15 +22,15 @@ const portfolioData = {
             { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg", category: "Cloud Infrastructure" },
         ],
         creative: [
-            { name: "Photoshop", icon: "img/Photoshop.png", category: "Image Editing" },
-            { name: "Illustrator", icon: "img/Illustrator.png", category: "Vector Design" },
-            { name: "After Effects", icon: "img/AfterEffect.png", category: "Motion Graphics" },
+            { name: "Photoshop", icon: "img/skills/Photoshop.webp", category: "Image Editing" },
+            { name: "Illustrator", icon: "img/skills/AdobeIllustrator.webp", category: "Vector Design" },
+            { name: "After Effects", icon: "img/skills/AfterEffect.webp", category: "Motion Graphics" },
             { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg", category: "UI/UX Design" },
-            { name: "Ibis Paint", icon: "img/IbisPaint.png", category: "Digital Illustration" },
-            { name: "PixelLab", icon: "img/PixelLab.png", category: "Typography & Layout" },
-            { name: "Canva", icon: "img/Canva.png", category: "Graphic Design" },
-            { name: "Alight Motion", icon: "img/AlightMotion.png", category: "Mobile Motion Design" },
-            { name: "CapCut", icon: "img/CapCut.png", category: "Video Editing" },
+            { name: "Ibis Paint", icon: "img/skills/IbisPaint.webp", category: "Digital Illustration" },
+            { name: "PixelLab", icon: "img/skills/PixelLab.webp", category: "Typography & Layout" },
+            { name: "Canva", icon: "img/skills/Canva.webp", category: "Graphic Design" },
+            { name: "Alight Motion", icon: "img/skills/AlightMotion.webp", category: "Mobile Motion Design" },
+            { name: "CapCut", icon: "img/skills/CapCut.webp", category: "Video Editing" },
         ]
     },
     experience: [
@@ -63,7 +63,7 @@ const portfolioData = {
             category: "development",
             desc: "An immersive web platform featuring Augmented Reality for historical artifacts.",
             long_desc: "An innovative digital project that integrates 3D GLB models into a Laravel environment. It allows users to interactively explore Balinese artifacts through AR features directly from their browser, creating a modern digital museum experience.",
-            img: "img/ARtifact Museum.png",
+            img: "img/projects/ARtifact Museum.webp",
             award: "",
             tech: [
             "Laravel",
@@ -77,7 +77,7 @@ const portfolioData = {
             category: "design",
             desc: "Philosophical digital poster; 1st Place Winner at DSP XV.",
             long_desc: "A champion project that combines the philosophical depth of traditional Balinese script with modern digital illustration techniques. This poster conveys a strong moral message through harmonious color composition and visuals.",
-            img: "img/Tanam Kebaikan, Tuai Kedamaian.png",
+            img: "img/projects/Tanam Kebaikan, Tuai Kedamaian.webp",
             award: "1st Place Winner",
             tech: [
                 "Ibis Paint",
@@ -89,7 +89,7 @@ const portfolioData = {
             category: "design",
             desc: "Visual narrative design exploring the link between history and the present",
             long_desc: "An illustrative work visualizing how stories and values from the past remain relevant today. By utilizing contrasting colors to distinguish two different timelines, this project successfully earned 3rd Place in the design competition held by Suska FM.",
-            img: "img/BedaMasaSatuCerita.png",
+            img: "img/projects/BedaMasaSatuCerita.webp",
             award: "3rd Place Winner",
             tech: [
             "Ibis Paint",
@@ -101,7 +101,7 @@ const portfolioData = {
             category: "design",
             desc: "Philosophical digital poster for the Invention 2025 competition",
             long_desc: "A visual work exploring the concept of universal balance (Rwa Bhineda) through the fusion of traditional cultural elements and contemporary digitalization techniques, specifically designed to meet national competition aesthetic standards.",
-            img: "img/Rwa Bhineda Digital.png",
+            img: "img/projects/Rwa Bhineda Digital.webp",
             award: "",
             tech: [
                 "Ibis Paint",
@@ -113,7 +113,7 @@ const portfolioData = {
             category: "design",
             desc: "Creative illustration for the J&T Express design competition.",
             long_desc: "A visual experiment blending modern logistics elements with a dynamic digital illustration style. Developed using Ibis Paint to create a communicative composition that aligns with the brand identity.",
-            img: "img/JNTExpressIllustrationCompetition.png",
+            img: "img/projects/JNTExpressIllustrationCompetition.webp",
             award: "",
             tech: [
                 "Ibis Paint",
@@ -126,7 +126,7 @@ const portfolioData = {
             category: "design",
             desc: "Motivational poster focused on nationalism and youth integrity.",
             long_desc: "A visual communication design aimed at inspiring Indonesian youth. It utilizes bold graphic elements to symbolize strength and integrity as the nation's pillars.",
-            img: "img/UkirIntegritasPemudaUntukBangsaBerdaya.png",
+            img: "img/projects/UkirIntegritasPemudaUntukBangsaBerdaya.webp",
             award: "",
             tech: [
                 "Ibis Paint",
@@ -138,7 +138,7 @@ const portfolioData = {
             category: "design",
             desc: "A reflective design poster highlighting the continuity of emotion across generations.",
             long_desc: "A design project illustrating how emotional connections remain unchanged through different eras. It focuses on detailed coloring techniques to create a nostalgic yet fresh atmosphere.",
-            img: "img/PantulanJiwaBedaMasaSatuRasa.png",
+            img: "img/projects/PantulanJiwaBedaMasaSatuRasa.webp",
             award: "",
             tech: [
                 "Ibis Paint",
@@ -149,7 +149,7 @@ const portfolioData = {
             category: "design",
             desc: "Digital illustration honoring the Goddess of Knowledge and Art.",
             long_desc: "A visual representation of Goddess Saraswati in a modern digital style. This project focuses on the precision of traditional iconography combined with smooth digital shading techniques.",
-            img: "img/DewiSaraswati.jpeg",
+            img: "img/projects/DewiSaraswati.webp",
             award: "",
             tech: [
                 "Ibis Paint",
@@ -161,7 +161,7 @@ const portfolioData = {
             category: "design",
             desc: "Narrative digital illustration with an epic mythological theme.",
             long_desc: "An illustration piece depicting a classic fragment of the 'Vastraharan Draupadi' story. It emphasizes facial expressions and visual dramatization using Ibis Paint to bring traditional folklore to life in a digital format.",
-            img: "img/VastraharanDraupadi.jpeg",
+            img: "img/projects/VastraharanDraupadi.webp",
             award: "",
             tech: [
             "Ibis Paint",
@@ -173,7 +173,7 @@ const portfolioData = {
             category: "design",
             desc: "Visual identity (logo) design for a class organization.",
             long_desc: "The creation of a logo representing solidarity and the unique characteristics of class members, prioritizing readability and distinct shapes as a symbol of shared identity. The name 'PASPADA' is a meaningful acronym for 'Pasukan Mipa Dua,' serving as a bold statement of unity and the collective strength of the group.",
-            img: "img/ClassLogo.png",
+            img: "img/projects/ClassLogo.webp",
             award: "",
             tech: [
             "Ibis Paint",
@@ -186,7 +186,7 @@ const portfolioData = {
             category: "design",
             desc: "Logo and T-shirt merchandise design for a swimming club.",
             long_desc: "Designing a sporty and dynamic visual identity, subsequently applied to apparel. This design considers technical printing aspects without compromising the aesthetic of the illustration.",
-            img: "img/SwimmingClubT-shirt.png",
+            img: "img/projects/SwimmingClubT-shirt.webp",
             award: "",
             tech: [
             "Ibis Paint",
@@ -199,7 +199,7 @@ const portfolioData = {
             category: "design",
             desc: "Visual identity branding for a swimming community.",
             long_desc: "Development of a logo emphasizing elements of water and speed. The primary focus was on logo flexibility for various media applications, from stickers to community banners.",
-            img: "img/SwimmingClubLogo.jpeg",
+            img: "img/projects/SwimmingClubLogo.webp",
             award: "",
             tech: [
             "Ibis Paint",
@@ -211,7 +211,7 @@ const portfolioData = {
             category: "design",
             desc: "Official logo for the 37th Graduation Ceremony of Politeknik Negeri Bali.",
             long_desc: "Creating a formal visual identity for a major ceremonial event. The design merges the number '37' with academic and local elements, providing an elegant yet celebratory feel for the graduates.",
-            img: "img/LogoForGraduationOfPNB.png",
+            img: "img/projects/LogoForGraduationOfPNB.webp",
             award: "",
             tech: [
             "Adobe Illustrator",
@@ -223,7 +223,7 @@ const portfolioData = {
             category: "design",
             desc: "Digital illustration inspired by local wisdom or iconography of the Guwang area.",
             long_desc: "A digital art project documenting or responding to the unique visual characteristics of Guwang. It relies on intricate line work and rich coloring to strengthen its sense of locality.",
-            img: "img/Guwang.png",
+            img: "img/projects/Guwang.webp",
             award: "",
             tech: [
             "Ibis Paint",
@@ -235,7 +235,7 @@ const portfolioData = {
             category: "design",
             desc: "Logo design exploration based on Balinese ornaments and philosophy.",
             long_desc: "A logo design study utilizing characteristic Balinese visual elements, such as traditional carvings and detailed mask faces (tapel), digitally processed to produce a strong and character-driven visual identity.",
-            img: "img/BalineseLogo.png",
+            img: "img/projects/BalineseLogo.webp",
             award: "",
             tech: [
             "Ibis Paint",
