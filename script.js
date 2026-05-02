@@ -1,7 +1,7 @@
 // 1 DATA DATABASE 
 const portfolioData = {
     role: "Full-stack Developer &<br><span class='blue-text'>Illustrative Designer</span>",
-    myPhoto: "./img/Photo.png", 
+    myPhoto: "./img/Photo.jpg", 
     aboutDesc: "I am I Komang Arya Yoga Pramana, a $age-year-old <span class='blue-text'><strong>Software Engineering Technology</strong></span> student at Bali State Polytechnic. I focus my expertise on <span class='blue-text'><strong>Laravel</strong></span> and <span class='blue-text'><strong>Flutter</strong></span>, as well as working as a <span class='blue-text'><strong>Digital Illustrator</strong></span>. I believe that technology is not just about lines of code, but about creating purposeful solutions wrapped in compelling design aesthetics. Combining technical precision with effective communication is my core strength in every project I undertake.",
     stats: {
         yearExp: 3,
