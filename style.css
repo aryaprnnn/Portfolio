@@ -307,7 +307,8 @@
         border-radius: 8px;
     }
     .project-title {
-        font-size: 0.8rem;
+        gap: -10px !important;
+        font-size: 0.6rem !important;
     }
     .category-tag {
         font-size: 0.6rem !important;
