@@ -2,7 +2,7 @@
 const portfolioData = {
     role: "Full-stack Developer &<br><span class='blue-text'>Illustrative Designer</span>",
     myPhoto: "./img/Photo.webp", 
-    aboutDesc: "I am I Komang Arya Yoga Pramana, a $age-year-old <span class='blue-text'><strong>Software Engineering Technology</strong></span> student at Bali State Polytechnic. I focus my expertise on <span class='blue-text'><strong>Laravel</strong></span> and <span class='blue-text'><strong>Flutter</strong></span>, as well as working as a <span class='blue-text'><strong>Digital Illustrator</strong></span>. I believe that technology is not just about lines of code, but about creating purposeful solutions wrapped in compelling design aesthetics. Combining technical precision with effective communication is my core strength in every project I undertake.",
+    aboutDesc: "I am I Komang Arya Yoga Pramana, a $age-year-old <span class='blue-text'><strong>Software Engineering Technology</strong></span> student at Bali State Polytechnic. I am a passionate <span class='blue-text'><strong>Junior Web Developer</strong></span> with a strong interest in <span class='blue-text'><strong>Full-stack Development</strong></span>, primarily using <span class='blue-text'><strong>Laravel</strong></span>. Besides coding, I also work as a <span class='blue-text'><strong>Digital Illustrator</strong></span>. I believe that web development is about more than just code; it's about building functional, aesthetic, and user-centric solutions. My strength lies in bridging technical logic with creative visual communication.",
     stats: {
         yearExp: 3,
         projectDone: 12,
@@ -10,19 +10,14 @@ const portfolioData = {
     },
     skills: {
         tech: [
-            { name: "Flutter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg", category: "Mobile Framework" },
             { name: "Laravel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg", category: "Web Framework" },
             { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", category: "Web Fundamental" },
             { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", category: "Web Fundamental" },
-            { name: "Dart", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg", category: "Programming Language" },
             { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", category: "Programming Language" },
             { name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg", category: "Programming Language" },
-            { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", category: "Programming Language" },
             { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg", category: "Database" },
-            { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg", category: "Cloud Infrastructure" },
         ],
         creative: [
-            { name: "Photoshop", icon: "img/skills/Photoshop.webp", category: "Image Editing" },
             { name: "Illustrator", icon: "img/skills/AdobeIllustrator.webp", category: "Vector Design" },
             { name: "After Effects", icon: "img/skills/AfterEffect.webp", category: "Motion Graphics" },
             { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg", category: "UI/UX Design" },
@@ -80,8 +75,8 @@ const portfolioData = {
             img: "img/projects/Tanam Kebaikan, Tuai Kedamaian.webp",
             award: "1st Place Winner",
             tech: [
-                "Ibis Paint",
-                "Adobe Illustrator",
+            "Ibis Paint",
+            "Adobe Illustrator",
             ],
         },
         {
@@ -104,7 +99,7 @@ const portfolioData = {
             img: "img/projects/Rwa Bhineda Digital.webp",
             award: "",
             tech: [
-                "Ibis Paint",
+            "Ibis Paint",
             "Adobe Illustrator",
             ],
         },
@@ -116,9 +111,9 @@ const portfolioData = {
             img: "img/projects/JNTExpressIllustrationCompetition.webp",
             award: "",
             tech: [
-                "Ibis Paint",
-                "Adobe Illustrator",
-                "PixelLab"
+            "Ibis Paint",
+            "Adobe Illustrator",
+            "PixelLab"
             ],
         },
         {
@@ -129,8 +124,8 @@ const portfolioData = {
             img: "img/projects/UkirIntegritasPemudaUntukBangsaBerdaya.webp",
             award: "",
             tech: [
-                "Ibis Paint",
-                "PixelLab",
+            "Ibis Paint",
+            "PixelLab",
             ],
         },
         {
@@ -141,7 +136,7 @@ const portfolioData = {
             img: "img/projects/PantulanJiwaBedaMasaSatuRasa.webp",
             award: "",
             tech: [
-                "Ibis Paint",
+            "Ibis Paint",
             ],
         },
         {
@@ -152,8 +147,8 @@ const portfolioData = {
             img: "img/projects/DewiSaraswati.webp",
             award: "",
             tech: [
-                "Ibis Paint",
-                "PixelLab",
+            "Ibis Paint",
+            "PixelLab",
             ],
         },
         {
