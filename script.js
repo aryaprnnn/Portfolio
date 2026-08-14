@@ -1,8 +1,8 @@
 // 1 DATA DATABASE 
 const portfolioData = {
-    role: "Full-stack Developer &<br><span class='blue-text'>Illustrative Designer</span>",
+    role: "Software Engineering Student &<br><span class='blue-text'>Visual Designer</span>",
     myPhoto: "./img/Photo.webp", 
-    aboutDesc: "I am I Komang Arya Yoga Pramana, a $age-year-old <span class='blue-text'><strong>Software Engineering Technology</strong></span> student at Bali State Polytechnic. I am a passionate <span class='blue-text'><strong>Junior Web Developer</strong></span> with a strong interest in <span class='blue-text'><strong>Full-stack Development</strong></span>, primarily using <span class='blue-text'><strong>Laravel</strong></span>. Besides coding, I also work as a <span class='blue-text'><strong>Digital Illustrator</strong></span>. I believe that web development is about more than just code; it's about building functional, aesthetic, and user-centric solutions. My strength lies in bridging technical logic with creative visual communication.",
+    aboutDesc: "I am I Komang Arya Yoga Pramana, a $age-year-old <span class='blue-text'><strong>Software Engineering Technology</strong></span> student at Bali State Polytechnic. I have a strong interest in <span class='blue-text'><strong>web development</strong></span> primarily using Laravel. Besides coding, I also work as a <span class='blue-text'><strong>Digital Illustrator</strong></span>. I believe web development is about more than just code. It is about building functional, aesthetic, and user-centered solutions. My strength lies in bridging technical logic with creative visual communication.",
     stats: {
         yearExp: 3,
         projectDone: 12,
